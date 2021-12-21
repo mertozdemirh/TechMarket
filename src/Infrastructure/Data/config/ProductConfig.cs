@@ -21,6 +21,9 @@ namespace Infrastructure.Data.config
             builder.HasOne(x => x.Brand)
                 .WithMany()
                 .HasForeignKey(x => x.BrandId);
+
+            builder.Property(x => x.Price)
+                .HasPrecision(18, 2);
         }
     }
 }
